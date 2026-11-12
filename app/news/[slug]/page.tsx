@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { init } from "next/dist/compiled/webpack/webpack";
 import { Metadata } from "next";
 import { ArticleCard } from "@/components/ArticleCard";
+import Link from "next/link"
 
 export const instant = false;
 
@@ -64,7 +65,11 @@ const ArticleDetailPage = async ({ params }: ArticleDetailPageType) => {
   return (
     <div className="w-[100vw] ">
       <div className="w-[350px] md:w-[704px] lg:w-[1184px] m-auto ">
-        <div>all stories</div>
+        <div className="h-[61px] w-full flex items-center gap-[12px] ">
+          <div className="text-[12px] text-[#22241F] font-[700] ">←  All stories</div>
+          <div className="text-[12px] text-[#65675F] font-[400] ">/</div>
+          <div className="text-[12px] text-[#65675F] font-[400] ">World</div>
+        </div>
         <div className="w-[100%] h-[1px] bg-[#E2E2DA] "></div>
         <div className="flex mt-[40px] items-center gap-[12px] ">
           <div

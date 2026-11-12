@@ -1,4 +1,4 @@
-import { ArticleCard } from "@/components/ArticleCard";
+  import { ArticleCard } from "@/components/ArticleCard";
 import { Sections } from "@/components/Sections";
 import data from "@/data/news.json";
 import { Metadata } from "next";
@@ -20,7 +20,6 @@ export const generateMetaData: Metadata = {
 
 const Home = () => {
   return (
-    <div className="w-[100vw]">
       <div className="flex flex-col flex-1 w-[350px] md:w-[704px] lg:w-[1184px] bg-white m-auto">
         {/* header */}
         <div className="w-[100%] h-[75px] mt-[40px] flex justify-between items-end">
@@ -72,15 +71,7 @@ const Home = () => {
             />
           ))}
         </div>
-        {/* <div className="flex w-[300px] h-[133px] gap-[43px] items-center">
-          <div>
-            <div className="text-[30px] text-[#22241F] font-[700] ">the daily ▧</div>
-            <div className="text-[12px] text-[#65675F] font-[400] ">A fresh perspective. Every day.</div>
-          </div>
-          <div className="text-[12px] text-[#22241F] font-[400] ">Back to top ↑</div>
-        </div> */}
       </div>
-    </div>
   );
 };
 
