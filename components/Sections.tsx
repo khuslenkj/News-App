@@ -1,7 +1,6 @@
 import { useState, MouseEvent } from "react";
 import { ArticleCard } from "./ArticleCard";
 import data from "@/data/news.json";
-import { counter } from "./Counter";
 
 const categories = [
   "All stories",
