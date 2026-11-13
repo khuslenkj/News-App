@@ -5,6 +5,8 @@ import { init } from "next/dist/compiled/webpack/webpack";
 import { Metadata } from "next";
 import { ArticleCard } from "@/components/ArticleCard";
 import Link from "next/link"
+import { BackButton } from "@/components/GoBack";
+
 
 export const instant = false;
 
@@ -66,7 +68,8 @@ const ArticleDetailPage = async ({ params }: ArticleDetailPageType) => {
     <div className="w-[100vw] ">
       <div className="w-[350px] md:w-[704px] lg:w-[1184px] m-auto ">
         <div className="h-[61px] w-full flex items-center gap-[12px] ">
-          <div className="text-[12px] text-[#22241F] font-[700] ">←  All stories</div>
+          <BackButton/>
+          {/* <button className="text-[12px] text-[#22241F] font-[700] ">←  All stories</button > */}
           <div className="text-[12px] text-[#65675F] font-[400] ">/</div>
           <div className="text-[12px] text-[#65675F] font-[400] ">World</div>
         </div>
