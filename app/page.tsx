@@ -1,4 +1,4 @@
-"use client"
+
 import { Sections } from "@/components/Sections";
 import data from "@/data/news.json";
 import { Metadata } from "next";

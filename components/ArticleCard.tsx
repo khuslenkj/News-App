@@ -51,45 +51,45 @@ export const ArticleCard = (props: ArticleCardType) => {
 
   return (
     <Link href={`news/${slug}`}>
-      <div className="w-[350px] md:w-[338px] lg:w-[376px] h-[500px] md:h-[515px] lg:h-[500px] rounded-[16px] border border-[#E7E5E4] overflow-hidden mb-[40px]">
-        <div className="w-[100%] h-[235px] overflow-hidden relative flex items-center">
+      <div className="w-87.5 md:w-84.5 lg:w-94 h-125 md:h-128.75 lg:h-125 rounded-2xl border border-[#E7E5E4] overflow-hidden mb-10">
+        <div className="w-full h-58.75 overflow-hidden relative flex items-center">
           <div
-            className={`absolute ${categoryColor}  text-[10px] font-[700] p-[6px_12px] rounded-[100px] top-[16px] left-[16px]`}
+            className={`absolute ${categoryColor}  text-xs font-bold py-1.5 px-3 rounded-full top-4 left-4`}
           >
             {category}
           </div>
-          <div className="absolute bottom-[16px] left-[16px] flex items-center gap-[6px]">
+          <div className="absolute bottom-4 left-4 flex items-center gap-1.5">
             <Clock className="size-3 text-white" />
-            <div className="text=[12px] text-white font-[400] ">
+            <div className="text=xs text-white font-normal">
               {minutes} min read
             </div>
           </div>
           <img src={image} alt={imageAlt} className="w-full" />
         </div>
-        <div className="w-[100%] p-[24px] flex flex-col justify-between">
-          <div className="h-[160px] md:h-[175px] lg:h-[160px]  ">
-            <div className="text-[20px] text-[#1C1917] font-[700]">{title}</div>
-            <div className="text-[14px] text-[#57534E] font-[400] mt-[12px]">
+        <div className="w-full p-6 flex flex-col justify-between">
+          <div className="h-40 md:h-43.75 lg:h-40  ">
+            <div className="text-xl text-[#1C1917] font-bold">{title}</div>
+            <div className="text-sm text-[#57534E] font-normal mt-3">
               {description}
             </div>
           </div>
           <div>
-            <div className="w-full h-[1px] bg-[#E2E2DA]"></div>
-            <div className="flex w-[326px] h-[40px] gap-[12px] mt-[17px] items-center bottom-0">
+            <div className="w-full h-px bg-[#E2E2DA]"></div>
+            <div className="flex w-81.5 h-10 gap-3 mt-4.25 items-center bottom-0">
               <div
-                className={`size-[40px] ${categoryColor} rounded-[100px] flex justify-center items-center text-[12px] font-[700]`}
+                className={`size-10 ${categoryColor} rounded-full flex justify-center items-center text-xs font-bold`}
               >
                 {initials}
               </div>
-              <div className="w-[200px] md:w-[188px] lg:w-[226px] h-[37px] flex flex-col justify-between">
-                <div className="text-[12px] text-[#292524] font-[700]">
+              <div className="w-50 md:w-47 lg:w-56.5 h-9.25 flex flex-col justify-between">
+                <div className="text-xs text-[#292524] font-bold">
                   {author}
                 </div>
-                <div className="text-[11px] text-[#78716C] font-[400]">
+                <div className="text-xs text-[#78716C] font-normal">
                   {date}
                 </div>
               </div>
-              <div className="size-[36px] bg-[#FFF7ED] rounded-[100px] flex justify-center items-center">
+              <div className="size-9 bg-[#FFF7ED] rounded-full flex justify-center items-center">
                 <ArrowUpRight className="size-5 text-[#C44724]" />
               </div>
             </div>

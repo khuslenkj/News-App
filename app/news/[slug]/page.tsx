@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { ArticleCard } from "@/components/ArticleCard";
 import Link from "next/link"
 import { BackButton } from "@/components/GoBack";
+import {MoveUpRight} from "lucide-react"
 
 
 export const instant = false;
@@ -65,125 +66,124 @@ const ArticleDetailPage = async ({ params }: ArticleDetailPageType) => {
 
   const categoryColor = categoryColors[article.category];
   return (
-    <div className="w-[100vw] ">
-      <div className="w-[350px] md:w-[704px] lg:w-[1184px] m-auto ">
-        <div className="h-[61px] w-full flex items-center gap-[12px] ">
+    <div>
+      <div className="w-87.5 md:w-176 lg:w-296 m-auto ">
+        <div className="h-15.25 w-full flex items-center gap-3 ">
           <BackButton/>
-          {/* <button className="text-[12px] text-[#22241F] font-[700] ">←  All stories</button > */}
-          <div className="text-[12px] text-[#65675F] font-[400] ">/</div>
-          <div className="text-[12px] text-[#65675F] font-[400] ">World</div>
+          <div className="text-xs text-[#65675F] font-normal ">/</div>
+          <div className="text-xs text-[#65675F] font-normal ">World</div>
         </div>
-        <div className="w-[100%] h-[1px] bg-[#E2E2DA] "></div>
-        <div className="flex mt-[40px] items-center gap-[12px] ">
+        <div className="w-full h-px bg-[#E2E2DA] "></div>
+        <div className="flex mt-10 items-center gap-3 ">
           <div
-            className={`${categoryColor} text-[10px] font-[700] p-[6px_12px] rounded-[100px]`}
+            className={`${categoryColor} text-xs font-bold py-1.5 px-3 rounded-full`}
           >
             {article?.category}
           </div>
-          <div className="text-[11px] text-[#65675F] font-[400] ">
+          <div className="text-xs text-[#65675F] font-normal ">  
             — THE DAILY
           </div>
         </div>
-        <div className="text-[36px] text-[#0C0A09] font-[700] mt-[20px] ">
+        <div className="text-4xl text-[#0C0A09] font-bold mt-5 ">
           {article?.title}
         </div>
-        <div className="text-[18px] text-[#57534E] font-[400] mt-[20px] ">
+        <div className="text-lg text-[#57534E] font-normal mt-5 ">
           {article?.description}
         </div>
-        <div className="w-[100%] h-[1px] bg-[#E2E2DA] mt-[20px] "></div>
-        <div className="flex flex-wrap gap-[63px] items-center mt-[20px] ">
-          <div className="flex gap-[14px] items-center">
+        <div className="w-full h-px bg-[#E2E2DA] mt-5 "></div>
+        <div className="flex flex-wrap gap-15.75 items-center mt-5 ">
+          <div className="flex gap-3.5 items-center">
             <div
-              className={`size-[40px] ${categoryColor} rounded-[100px] flex justify-center items-center text-[12px] font-[700]`}
+              className={`size-10 ${categoryColor} rounded-full flex justify-center items-center text-3 font-bold`}
             >
               {initials}
             </div>
-            <div className="w-[200px] md:w-[188px] lg:w-[226px] h-[37px] flex flex-col justify-between">
-              <div className="text-[10px] text-[#65675F] font-[700]">
+            <div className="w-50 md:w-47 lg:w-56.5 h-9.25 flex flex-col justify-between">
+              <div className="text-xs text-[#65675F] font-bold">
                 WRITTEN BY
               </div>
-              <div className="text-[12px] text-[#292524] font-[700]">
+              <div className="text-xs text-[#292524] font-bold">
                 {article?.author}
               </div>
             </div>
           </div>
-          <div className="flex gap-[57px] h-[41px] ">
+          <div className="flex gap-14.25 h-10.25 ">
             <div className="flex flex-col justify-between ">
-              <div className="text-[10px] text-[#65675F] font-[700] ">
+              <div className="text-xs text-[#65675F] font-bold ">
                 PUBLISHED
               </div>
-              <div className="text-[14px] text-[#22241F] font-[400] ">
+              <div className="text-sm text-[#22241F] font-normal ">
                 {article?.date}
               </div>
             </div>
             <div className="flex flex-col justify-between ">
-              <div className="text-[10px] text-[#65675F] font-[700] ">
+              <div className="text-xs text-[#65675F] font-bold ">
                 READING TIME
               </div>
-              <div className="text-[14px] text-[#22241F] font-[400] ">
+              <div className="text-sm text-[#22241F] font-bold ">
                 1 min read
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-[32px] w-[100%] h-[262.5px] md:h-[352px] lg:h-[514.78px] rounded-[16px] md:rounded-[24px] lg:roudned-[24px] overflow-hidden flex items-center ">
+        <div className="mt-8 w-full h-65.5 md:h-88 lg:h-128.5 rounded-2xl md:rounded-3xl lg:rounded-3xl overflow-hidden flex items-center ">
           <img
             src={article?.image}
             alt={article?.imageAlt}
             className="w-full"
           />
         </div>
-        <div className="flex flex-wrap mt-[12px]">
-          <div className="text-[10px] text-[#65675F] font-[400] ">
+        <div className="flex flex-wrap mt-3">  
+          <div className="text-xs text-[#65675F] font-normal ">
             {article?.imageAlt}
           </div>
-          <div className="text-[10px] text-[#65675F] font-[400] ">
+          <div className="text-xs text-[#65675F] font-normal ">
             Illustrative photography · Unsplash
           </div>
         </div>
         <div className="w-full flex flex-col items-center ">
-          <div className="mt-[40px] w-[300px] md:w-[704px] lg:w-[768px] border border-[#E2E2DA] rounded-[16px] p-[24px] flex flex-col gap-[24px] ">
-            <div className="text-[10px] text-[#C44724] font-[700] ml-[20px]">
-              THE STORY
+          <div className="mt-10 w-75 md:w-176 lg:w-3xl border border-[#E2E2DA] rounded-2xl p-6 flex flex-col gap-6 ">
+            <div className="text-xs text-[#C44724] font-bold ml-5">
+              THE STORE
             </div>
-            <div className="text-[18px] text-[#44403C] font-[400] ">
+            <div className="text-lg text-[#44403C] font-normal ">
               {article?.content[0]}
             </div>
-            <div className="text-[18px] text-[#44403C] font-[400] ">
+            <div className="text-lg text-[#44403C] font-normal ">
               {article?.content[1]}
             </div>
-            <div className="text-[18px] text-[#44403C] font-[400] ">
+            <div className="text-lg text-[#44403C] font-normal ">
               {article?.content[2]}
             </div>
-            <div className="text-[16px] text-[#C44724] font-[700] self-center ">
+            <div className="text-base text-[#C44724] font-bold self-center ">
               • • •
             </div>
           </div>
-          <div className="text-[11px] text-[#65675F] font-[400] mt-[16px] ">
+          <div className="text-xs text-[#65675F] font-100 mt-4 ">
             Fictional sample story · The Daily learning edition
           </div>
-          <div className="w-[350px] md:w-[630px] lg:w-[694px] bg-[#FFF7ED] rounded-[16px] flex flex-wrap justify-between p-[24px] gap-[24px] mt-[16px] ">
+          <div className="w-87.5 md:w-157.5 lg:w-173.5 bg-[#FFF7ED] rounded-2xl flex flex-wrap justify-between p-6 gap-6 mt-4 ">
             <div>
-              <div className="text-[18px] text-[#22241F] font-[600] ">
+              <div className="text-lg text-[#22241F] font-semibold ">
                 A little more curiosity?
               </div>
-              <div className="text-[14px] text-[#65675F] font-[400] ">
+              <div className="text-sm text-[#65675F] font-normal ">
                 Your next good read is just around the corner.
               </div>
             </div>
-            <button className="text-[12px] text-[white] font-[400] bg-[#22241F] p-[10px_12px] rounded-[100px] ">
-              All stories ↗
+            <button className="text-xs text-[white] font-normal bg-[#22241F] py-2.5 px-3 rounded-full flex gap-1">
+              All stories <MoveUpRight size={16} color="white" />
             </button>
           </div>
         </div>
-        <div className="w-[100%] h-[1px] bg-[#E2E2DA] mt-[40px] "></div>
-        <div className="text-[10px] text-[#C44724] font-[700] mt-[40px] ">
+        <div className="w-full h-px bg-[#E2E2DA] mt-10 "></div>
+        <div className="text-xs text-[#C44724] font-bold mt-10 ">
           KEEP YOUR CURIOSITY GOING
         </div>
-        <div className="text-[30px] text-[#22241F] font-[700] mt-[8px] ">
+        <div className="text-3xl text-[#22241F] font-bold mt-2 ">
           More to discover.
         </div>
-        <div className="mt-[28px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-[64px] ">
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-16 ">
           {related.map((article) => (
             <ArticleCard key={article.id} {...article} />
           ))}

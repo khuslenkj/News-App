@@ -25,17 +25,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full m- flex flex-col">
         {children}
-        <div className="w-[350px] md:w-[704px] lg:w-[1184px] m-auto"> 
-          <div className="flex w-[300px] h-[133px] gap-[43px] items-center">
+        <div className="w-87.5 md:w-176 lg:w-296 m-auto"> 
+          <div className="flex w-75 h-33.25 gap-10.75 items-center">
             <div>
-              <div className="text-[30px] text-[#22241F] font-[700] ">
+              <div className="text-3xl text-[#22241F] font-bold ">
                 the daily ▧
               </div>
-              <div className="text-[12px] text-[#65675F] font-[400] ">
+              <div className="text-xs text-[#65675F] font-normal ">
                 A fresh perspective. Every day.
               </div>
             </div>
-            <div className="text-[12px] text-[#22241F] font-[400] ">
+            <div className="text-xs text-[#22241F] font-normal ">
               Back to top ↑
             </div>
           </div>

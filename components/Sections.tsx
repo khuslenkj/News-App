@@ -1,3 +1,4 @@
+"use client"
 import { useState, MouseEvent } from "react";
 import { ArticleCard } from "./ArticleCard";
 import data from "@/data/news.json";
@@ -17,25 +18,25 @@ export const Sections = () => {
   );
   let counter = 0;
   return (
-    <div className="flex flex-col flex-1 w-[350px] md:w-[704px] lg:w-[1184px] bg-white m-auto">
+    <div className="flex flex-col flex-1 w-87.5 md:w-176 lg:w-296 bg-white m-auto">
       {/* header */}
-      <div className="w-[100%] h-[75px] mt-[40px] flex justify-between items-end">
+      <div className="w-full h-18.75 mt-10 flex justify-between items-end">
         <div className="flex flex-col">
-          <div className="text-[10px] text-[#C44724] font-[700]">
+          <div className="text-xs text-[#C44724] font-bold">
             STAY CURIOUS
           </div>
-          <div className="text-[36px] text-[#22241F] font-[700]">
+          <div className="text-4xl text-[#22241F] font-bold">
             The latest stories.
           </div>
         </div>
-        <div className="text-[12px] text-[#65675F] font-[400] hidden md:block">
+        <div className="text-xs text-[#65675F] font-normal hidden md:block">
           Big ideas. Fresh voices. Worth your time.
         </div>
       </div>
       {/* header2 */}
-      <div className="w-[100%] h-[160px] md:h-[95px]">
-        <div className="w-[100%] h-[1px] bg-[#E2E2DA] mt-[24px]"></div>
-        <div className="mt-[12px] flex gap-[4px] flex-wrap">
+      <div className="w-full h-40 md:h-23.75">
+        <div className="w-full h-px bg-[#E2E2DA] mt-6"></div>
+        <div className="mt-3 flex gap-1 flex-wrap">
           {categories.map((cate) => (
             <button
               onClick={handleClick}
@@ -43,18 +44,18 @@ export const Sections = () => {
               id={cate}
               className={
                 category === cate
-                  ? "bg-[#22241F] text-white w-[80px] h-[37px] rounded-[4px] flex justify-center items-center text-[12px] font-[400]"
-                  : "w-[80px] h-[37px] rounded-[4px] flex justify-center items-center hover:bg-[#d7f9a4] text-[12px] text-[#65675F] font-[400]"
+                  ? "bg-[#22241F] text-white w-20 h-9.25 rounded-sm flex justify-center items-center text-xs font-normal"
+                  : "w-20 h-9.25 rounded-sm flex justify-center items-center hover:bg-[#d7f9a4] text-xs text-[#65675F] font-normal"
               }
             >
               {cate}
             </button>
           ))}
         </div>
-        <div className="w-[100%] h-[1px] bg-[#E2E2DA] mt-[12px]"></div>
+        <div className="w-full h-px bg-[#E2E2DA] mt-4"></div>
       </div>
       {/* main */}
-      <div className="h-[57px] w-[100%] flex items-center text-[12px] text-[#65675F] font-[400]">
+      <div className="h-14.25 w-full flex items-center text-xs text-[#65675F] font-normal">
         {filtered.length} stories{" "}
         {category === "All stories"
           ? "to explore"
